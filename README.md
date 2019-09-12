@@ -1,11 +1,9 @@
----
-title: "README"
-output: html_document
----
-
-
 
 ## Limited Memory List
+
+
+
+
 
 The purpose of this package is to implement simple lists and vectors which automatically drop the oldest elements when the number of elements grows large enough.
 

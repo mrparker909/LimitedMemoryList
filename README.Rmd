@@ -1,14 +1,12 @@
----
-title: "README"
-output: html_document
----
+
+## Limited Memory List
+
 
 ```{r echo=F, eval=F}
 # use this to knit the README.md file
 knitr::knit(input="README.Rmd", output = "README.md")
 ```
 
-## Limited Memory List
 
 The purpose of this package is to implement simple lists and vectors which automatically drop the oldest elements when the number of elements grows large enough.
 

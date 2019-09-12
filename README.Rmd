@@ -3,7 +3,10 @@ title: "README"
 output: html_document
 ---
 
-
+```{r echo=F, eval=F}
+# use this to knit the README.md file
+knitr::knit(input="README.Rmd", output = "README.md")
+```
 
 ## Limited Memory List
 
@@ -13,8 +16,7 @@ The purpose of this package is to implement simple lists and vectors which autom
 
 You can install from github:
 
-
-```r
+```{r echo=T, eval=F}
 library(remotes)
 remotes::install_github("mrparker909/LimitedMemoryList")
 ```
@@ -23,8 +25,7 @@ remotes::install_github("mrparker909/LimitedMemoryList")
 
 First, load the library:
 
-
-```r
+```{r}
 library(LimitedMemoryList)
 ```
 
@@ -32,15 +33,13 @@ library(LimitedMemoryList)
 
 Create a new list:
 
-
-```r
+```{r}
 my_list = list()
 ```
 
 Add elements to the list, limiting the memory to 3 items:
 
-
-```r
+```{r}
 my_list = LMList("please",my_list,3)
 my_list = LMList("tree",  my_list,3)
 my_list = LMList("my",    my_list,3)
@@ -49,42 +48,25 @@ my_list = LMList("don't", my_list,3)
 my_list
 ```
 
-```
-## [[1]]
-## [1] "don't"
-## 
-## [[2]]
-## [1] "climb"
-## 
-## [[3]]
-## [1] "my"
-```
-
 Because the list memory is capped at 3, the first two elements were dropped to make room for the new elements.
 
 ### Vectors
 
 Create a new vector:
 
-
-```r
+```{r}
 my_vec = c()
 ```
 
 Add elements to the vector, limiting the memory to 4 items:
 
-
-```r
+```{r}
 my_vec = LMc("please",my_vec,4)
 my_vec = LMc("tree",  my_vec,4)
 my_vec = LMc("my",    my_vec,4)
 my_vec = LMc("climb", my_vec,4)
 my_vec = LMc("don't", my_vec,4)
 my_vec
-```
-
-```
-## [1] "don't" "climb" "my"    "tree"
 ```
 
 Since the vector memory is capped at 4, the last element was dropped to make room for the newest element.

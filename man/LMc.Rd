@@ -9,9 +9,9 @@ LMc(new_el, old_list = NULL, M = 1)
 \arguments{
 \item{new_el}{elements to add to top of list, if length(new_el) > 1, then the new elements will be appended left to right (so that the last element will be the most recent).}
 
-\item{old_list}{elements to concatenate new_el with}
+\item{old_list}{elements to concatenate new_el with.}
 
-\item{M}{maximum number of elements (will truncate by removing oldest if length is greater than M)}
+\item{M}{Memory, maximum number of elements (will truncate by removing oldest if length is greater than M)}
 }
 \description{
 Limited Memory concatenate. Adds new elements to front, removing oldest elements if new length is greater tham M

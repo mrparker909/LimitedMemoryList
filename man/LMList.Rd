@@ -11,7 +11,7 @@ LMList(new_el, old_list = list(), M = 1)
 
 \item{old_list}{list to append new_el to}
 
-\item{M}{maximum size of list (will truncate by removing bottom if length is greater than M)}
+\item{M}{maximum size of list (will truncate by removing bottom if length is greater than M). If M==0, the list will have 'unlimited' memory.}
 }
 \description{
 Limited Memory List. Adds new element to top of list, removing bottom elements if new length is greater than M.
